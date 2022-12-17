@@ -118,3 +118,7 @@ dmypy.json
 
 # OSX files
 .DS_Store
+
+# JupyterLite output dir
+examples/lite
+*.doit.db

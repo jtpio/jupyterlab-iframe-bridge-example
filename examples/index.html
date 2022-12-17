@@ -1,16 +1,16 @@
 <html>
-  <title>Example bridge between a host app and JupyterLab</title>
+  <title>Example bridge between a host app and JupyterLite</title>
   <body>
     <script type="text/javascript">
       function toggle() {
-        window.frames.jupyterlab.postMessage({ type: 'jupyterlab-iframe-bridge-example'}, "http://localhost:8888");
+        window.frames.jupyterlab.postMessage({ type: 'jupyterlab-iframe-bridge-example'});
       }
     </script>
-    <h2>Below is JupyterLab running in an IFrame</h2>
+    <h2>Below is a JupyterLite site running in an IFrame</h2>
     <p>
       Click the following button sends a message to the JupyterLab IFrame to toggle the theme.
     </p>
     <input type="button" value="Toggle the JupyterLab Theme" onclick="toggle()">
-    <iframe name="jupyterlab" src="http://localhost:8888/lab" width="100%" height="600px" sandbox="allow-scripts allow-same-origin"></iframe>
+    <iframe name="jupyterlab" src="lite/" width="100%" height="600px" sandbox="allow-scripts allow-same-origin"></iframe>
   </body>
 </html>
