@@ -1,31 +1,18 @@
 # jupyterlab_iframe_bridge_example
 
 [![Github Actions Status](https://github.com/jtpio/jupyterlab-iframe-bridge-example/workflows/Build/badge.svg)](https://github.com/jtpio/jupyterlab-iframe-bridge-example/actions/workflows/build.yml)
-Bridge extension when JupyterLab is embedded in an IFrame
+
+An example bridge extension to demo passing messages between a host page and JupyterLab running in an IFrame.
+
+⚠️ This is an example extension for demo purposes only.
+
+![image](https://user-images.githubusercontent.com/591645/208255320-12189103-ced7-48fb-a951-449b41ea0b8f.png)
 
 ## Requirements
 
 - JupyterLab >= 3.0
 
-## Install
-
-To install the extension, execute:
-
-```bash
-pip install jupyterlab_iframe_bridge_example
-```
-
-## Uninstall
-
-To remove the extension, execute:
-
-```bash
-pip uninstall jupyterlab_iframe_bridge_example
-```
-
-## Contributing
-
-### Development install
+## Development install
 
 Note: You will need NodeJS to build the extension package.
 
@@ -61,7 +48,7 @@ By default, the `jlpm build` command generates the source maps for this extensio
 jupyter lab build --minimize=False
 ```
 
-### Development uninstall
+## Development uninstall
 
 ```bash
 pip uninstall jupyterlab_iframe_bridge_example
@@ -70,7 +57,3 @@ pip uninstall jupyterlab_iframe_bridge_example
 In development mode, you will also need to remove the symlink created by `jupyter labextension develop`
 command. To find its location, you can run `jupyter labextension list` to figure out where the `labextensions`
 folder is located. Then you can remove the symlink named `jupyterlab-iframe-bridge-example` within that folder.
-
-### Packaging the extension
-
-See [RELEASE](RELEASE.md)

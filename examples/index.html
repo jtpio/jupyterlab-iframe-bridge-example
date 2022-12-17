@@ -3,7 +3,6 @@
   <body>
     <script type="text/javascript">
       function toggle() {
-        console.log("Interacting with JupyterLab");
         window.frames.jupyterlab.postMessage({ type: 'jupyterlab-iframe-bridge-example'}, "http://localhost:8888");
       }
     </script>
