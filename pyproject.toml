@@ -3,7 +3,7 @@ requires = ["hatchling>=1.4.0", "jupyterlab>=3.4.7,<4.0.0", "hatch-nodejs-versio
 build-backend = "hatchling.build"
 
 [project]
-name = "jupyterlab_iframe_bridge"
+name = "jupyterlab_iframe_bridge_example"
 readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.7"
@@ -37,24 +37,24 @@ source = "nodejs"
 fields = ["description", "authors", "urls"]
 
 [tool.hatch.build.targets.sdist]
-artifacts = ["jupyterlab_iframe_bridge/labextension"]
+artifacts = ["jupyterlab_iframe_bridge_example/labextension"]
 exclude = [".github", "binder"]
 
 [tool.hatch.build.targets.wheel.shared-data]
-"jupyterlab_iframe_bridge/labextension" = "share/jupyter/labextensions/jupyterlab-iframe-bridge"
-"install.json" = "share/jupyter/labextensions/jupyterlab-iframe-bridge/install.json"
+"jupyterlab_iframe_bridge_example/labextension" = "share/jupyter/labextensions/jupyterlab-iframe-bridge-example"
+"install.json" = "share/jupyter/labextensions/jupyterlab-iframe-bridge-example/install.json"
 
 [tool.hatch.build.hooks.version]
-path = "jupyterlab_iframe_bridge/_version.py"
+path = "jupyterlab_iframe_bridge_example/_version.py"
 
 [tool.hatch.build.hooks.jupyter-builder]
 dependencies = ["hatch-jupyter-builder>=0.5"]
 build-function = "hatch_jupyter_builder.npm_builder"
 ensured-targets = [
-    "jupyterlab_iframe_bridge/labextension/static/style.js",
-    "jupyterlab_iframe_bridge/labextension/package.json",
+    "jupyterlab_iframe_bridge_example/labextension/static/style.js",
+    "jupyterlab_iframe_bridge_example/labextension/package.json",
 ]
-skip-if-exists = ["jupyterlab_iframe_bridge/labextension/static/style.js"]
+skip-if-exists = ["jupyterlab_iframe_bridge_example/labextension/static/style.js"]
 
 [tool.hatch.build.hooks.jupyter-builder.build-kwargs]
 build_cmd = "build:prod"
@@ -64,7 +64,7 @@ npm = ["jlpm"]
 build_cmd = "install:extension"
 npm = ["jlpm"]
 source_dir = "src"
-build_dir = "jupyterlab_iframe_bridge/labextension"
+build_dir = "jupyterlab_iframe_bridge_example/labextension"
 
 [tool.jupyter-releaser.options]
 version_cmd = "hatch version"

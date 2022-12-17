@@ -1,20 +1,20 @@
 {
-  "name": "jupyterlab-iframe-bridge",
+  "name": "jupyterlab-iframe-bridge-example",
   "version": "0.1.0",
-  "description": "Bridge extension when JupyterLab is embedded in an IFrame",
+  "description": "Bridge extension to demo passing messages when JupyterLab is embedded in an IFrame",
   "keywords": [
     "jupyter",
     "jupyterlab",
     "jupyterlab-extension"
   ],
-  "homepage": "https://github.com/jtpio/jupyterlab-iframe-bridge",
+  "homepage": "https://github.com/jtpio/jupyterlab-iframe-bridge-example",
   "bugs": {
-    "url": "https://github.com/jtpio/jupyterlab-iframe-bridge/issues"
+    "url": "https://github.com/jtpio/jupyterlab-iframe-bridge-example/issues"
   },
   "license": "BSD-3-Clause",
   "author": {
     "name": "Jeremy Tuloup",
-    "email": " "
+    "email": ""
   },
   "files": [
     "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
@@ -25,7 +25,7 @@
   "style": "style/index.css",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jtpio/jupyterlab-iframe-bridge.git"
+    "url": "https://github.com/jtpio/jupyterlab-iframe-bridge-example.git"
   },
   "scripts": {
     "build": "jlpm build:lib && jlpm build:labextension:dev",
@@ -36,7 +36,7 @@
     "clean": "jlpm clean:lib",
     "clean:lib": "rimraf lib tsconfig.tsbuildinfo",
     "clean:lintcache": "rimraf .eslintcache .stylelintcache",
-    "clean:labextension": "rimraf jupyterlab_iframe_bridge/labextension",
+    "clean:labextension": "rimraf jupyterlab_iframe_bridge_example/labextension",
     "clean:all": "jlpm clean:lib && jlpm clean:labextension && jlpm clean:lintcache",
     "eslint": "jlpm eslint:check --fix",
     "eslint:check": "eslint . --cache --ext .ts,.tsx",
@@ -80,8 +80,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "jupyterlab": { 
+  "jupyterlab": {
     "extension": true,
-    "outputDir": "jupyterlab_iframe_bridge/labextension"
+    "outputDir": "jupyterlab_iframe_bridge_example/labextension"
   }
 }
