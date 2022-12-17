@@ -13,9 +13,11 @@ const plugin: JupyterFrontEndPlugin<void> = {
   autoStart: true,
   requires: [IThemeManager],
   activate: (app: JupyterFrontEnd, themeManager: IThemeManager) => {
-    console.log('JupyterLab extension jupyterlab-iframe-bridge-example is activated!');
+    console.log(
+      'JupyterLab extension jupyterlab-iframe-bridge-example is activated!'
+    );
 
-    window.addEventListener('message', (event) => {
+    window.addEventListener('message', event => {
       if (event.data.type === 'jupyterlab-iframe-bridge-example') {
         console.log('Received message from iframe:', event.data);
 
