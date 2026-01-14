@@ -1,5 +1,11 @@
 # jupyterlab-iframe-bridge-example
 
+**Archived**
+
+We recommend using `jupyter-iframe-commands` directly: https://github.com/TileDB-Inc/jupyter-iframe-commands
+
+---
+
 [![Github Actions Status](https://github.com/jtpio/jupyterlab-iframe-bridge-example/workflows/Build/badge.svg)](https://github.com/jtpio/jupyterlab-iframe-bridge-example/actions/workflows/build.yml)
 
 An example bridge extension to demo passing messages between a host page and JupyterLab running in an IFrame.
